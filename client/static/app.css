@@ -1,0 +1,23 @@
+/*
+@import url(https://fonts.googleapis.com/css?family=);
+@white: #ffffff;
+@dkGrey: #6C6C6C;
+@mdGrey: #f0f0f0;
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: @white;
+    /*font-family: 'Alegreya Sans';
+    font-size: 18px;
+    color: @dkGrey;*/
+
+
+}
+
+
+/*.masthead {
+    text-align: center;
+    margin: 0 auto;
+}*/
