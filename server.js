@@ -37,11 +37,6 @@ app.get('/property', (req, res) => {
     //     }
         res.json({});
     // });
-	//  To view all valid content-types for making an OPTIONS, 
-	//  make a request to the SimplyRETS api root
-		// curl -XOPTIONS -u simplyrets:simplyrets https://api.simplyrets.com/
-	// https://api.simplyrets.com/
-	// basic auth: for testing, use simplyrets:simplyrets
 });
 
 function runServer() {

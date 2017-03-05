@@ -1,0 +1,105 @@
+//  To view all valid content-types for making an OPTIONS,
+//  make a request to the SimplyRETS api root
+    // curl -XOPTIONS -u simplyrets:simplyrets https://api.simplyrets.com/
+// https://api.simplyrets.com/
+// basic auth: for testing, use simplyrets:simplyrets
+// params for get /properties endpoint
+    // q
+        // A textual keyword search. This parameter will search the following fields, when available:
+        //
+        // listingId (This does not search the mlsId field in the SimplyRETS response body)
+        // street number
+        // street name
+        // mls area (major)
+        // city
+        // subdivision name
+        // postal code
+    // status
+        // Active: Active Listing which is still on the market
+        // ActiveUnderContract: An offer has been accepted but the listing
+        //is still on market. Synonyms: Accepting Backup Offers, Backup Offer
+        //, Active With Accepted. Synonyms: Offer, Backup, Contingent
+        // Pending: An offer has been accepted and the listing is no longer
+        //on market. Synonyms: Offer Accepted, Under Contract
+        // Hold: The listing has been withdrawn from the market, but a contract
+        //still exists between the seller and the listing member. Synonyms:
+        // Hold, Hold Do Not Show, Temp Off Market
+        // Withdrawn: The listing has been withdrawn from the market, but a
+        // contract still exists between the seller and the listing member.
+        // Synonyms: Hold, Hold Do Not Show, Temp Off Market
+        // Closed: The purchase agreement has been fulfilled or the lease
+        // agreement has been executed. Synonyms: Sold, Leased, Rented, Closed Sale
+        // Expired: The listing contract has expired
+        // Delete: The listing contract was never valid or other reason for
+        // the contract to be nullified. Synonyms: Kill, Zap
+        // Incomplete: The listing has not yet be completely entered and is
+        // not yet published in the MLS. Synonyms: Draft, Partially Complted
+        // ComingSoon
+    // type
+        // residential
+        // rental
+        // multifamily
+        // Condominium
+        // commercial
+        // land
+    // agent
+        // Agent ID (mls)
+    // brokers
+        // broker id (mls)
+        // listing office id (ListOfficeId - mls)
+// following accept integer arguments
+    // minprice
+    // maxprice
+    // minarea
+    // maxarea
+    // minbaths
+    // maxbaths
+    // minbeds
+    // maxbeds
+    // maxdom (days on market)
+    // min year (year built)
+    // limit (listings to return)
+    // offset (limit per page)
+//lastId
+    // Used as a cursor for pagination. When using lastId, the sort parameter will not work.
+// vendor
+    // vender ids to search from
+// postalCodes
+    // Array[string]
+// features
+    // make an options request to see all possible features
+    // wet bar and high ceiling would look like ?features=Wet%20Bar&amp;features=High%20Ceiling
+// water
+    // specify true (string) to feature only water listings
+// neighborhoods
+    // takes string/Array
+// cities
+    // takes string/array
+// counties
+    // takes string/Array
+// points
+    //long/lat
+// include
+    // can include the following fields in the response:
+        // association' includes additional HOA data
+        // 'agreement' information on the listing agreement
+        // 'garageSpaces' additional garage data
+        // 'maintenanceExpense' data on maintenance expenses
+        // 'parking' additional parking data
+        // 'pool' includes an additional pool description
+        // 'taxAnnualAmount' include the annual tax amount
+        // 'taxYear' include the tax year data
+        // 'rooms' include parameter will include any additional rooms as a list.
+// sort
+    // sort by specific field, use minus (-) for decreasing results
+        // listprice
+        // listdate
+        // beds
+        // baths
+// count
+    // default true
+    // can set false to increase search speed, and a count header will not be returned
+// /openhouses endpoint with same params (broker, neighborhood, agent, etc)
+// can also sort by startdate (date-time)
+// /openhouses/{openHouseKey} for a specific openhouse
+// /properties/{mlsId} for a specific property
