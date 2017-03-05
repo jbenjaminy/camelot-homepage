@@ -17,16 +17,16 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/register', (req, res) => {
-    // const credentials = req.body;
-    // register(credentials).then((err, user) => {
-    //     if (err) {
-    //         console.error(err);
-    //         return res.sendStatus(500);
-    //     }
-        res.json({});
-    // });
-});
+// app.post('/register', (req, res) => {
+//     const credentials = req.body;
+//     register(credentials).then((err, user) => {
+//         if (err) {
+//             console.error(err);
+//             return res.sendStatus(500);
+//         }
+//         res.json({});
+//     });
+// });
 
 app.get('/property', (req, res) => {
     // const credentials = req.body;
