@@ -10,12 +10,12 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static('build'));
 app.use(jsonParser);
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//     next();
+// });
 
 // app.post('/register', (req, res) => {
 //     const credentials = req.body;
@@ -28,16 +28,16 @@ app.use((req, res, next) => {
 //     });
 // });
 
-app.get('/property', (req, res) => {
-    // const credentials = req.body;
-    // login(credentials).then((err, user) => {
-    //     if (err) {
-    //         console.error(err);
-    //         return res.sendStatus(500);
-    //     }
-        res.json({});
-    // });
-});
+// app.get('/property', (req, res) => {
+//     // const credentials = req.body;
+//     // login(credentials).then((err, user) => {
+//     //     if (err) {
+//     //         console.error(err);
+//     //         return res.sendStatus(500);
+//     //     }
+//         res.json({});
+//     // });
+// });
 
 function runServer() {
 	app.listen(PORT, HOST, err => {

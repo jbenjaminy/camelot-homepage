@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Main from './components/main';
+import routes from './routes';
 
 document.addEventListener('DOMContentLoaded', () => {
 	ReactDOM.render(
 		<Provider store={store}>
-			<Main />
+			{routes}
 		</Provider>, document.getElementById('app')
 	);
 });

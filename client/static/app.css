@@ -5,15 +5,105 @@
 @mdGrey: #f0f0f0;
 */
 
-body {
+html, body, div, span, ul, li, .main, .main-wrapper, .header, .logo,
+.nav, .nav-container {
     margin: 0;
     padding: 0;
-    background-color: @white;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
     /*font-family: 'Alegreya Sans';
     font-size: 18px;
     color: @dkGrey;*/
+}
 
+body * {
+    outline: 0;
+}
 
+a {
+    color: inherit;
+}
+
+ol, ul {
+    list-style-type: none;
+    list-style-image: none
+    list-style-position: outside;
+}
+
+.main {
+    width: 100%;
+    min-width: 1288px;
+    height: auto;
+}
+
+.main-wrapper {
+    width: 100%;
+    min-width: 1288px;
+    height: auto;
+    background-color: #6C6C6C;
+    /*background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;*/
+    position: absolute;
+    min-height: 89px;
+    top: 40px;
+    z-index: 100;
+    opacity: .70;
+}
+
+.header {
+    width: 1258px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.header .logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 63px;
+    width: 389px;
+}
+
+.header .logo a {
+    display: block;
+    padding-top: 44px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    padding-left: 0px;
+    width: 232px;
+}
+
+.logo-icon, .logo-text {
+    display: inline-block;
+}
+
+.header .nav > .nav-container > ul {
+    font-size: 0;
+}
+
+.header .nav > .nav-container > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
 }
 
 
